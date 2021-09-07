@@ -14,7 +14,8 @@ function AuthProvider(props) {
   // Create the States that we need
   const [user, setUser] = useState({});
   const [complaints, setComplaints] = useState([]);
-  const [dataSet, setDataSet] = useState([]);
+  const [dataSetType, setDataSetType] = useState([]);
+  const [dataSetStatus, setDataSetStatus] = useState([]);
 
   // Function to get the Complaints
   const getComplaints = async () => {
@@ -41,7 +42,20 @@ function AuthProvider(props) {
         productCount = productCount + 1;
       }
     });
-    setDataSet([deliveryCount, priceCount, productCount]);
+    setDataSetType([deliveryCount, priceCount, productCount]);
+    let pendingCount = 0;
+    let resolvedCount = 0;
+    let dismissedCount = 0;
+    res.data.forEach((elm) => {
+      if (elm.status === "pending") {
+        pendingCount = pendingCount + 1;
+      } else if (elm.status === "resolved") {
+        resolvedCount = resolvedCount + 1;
+      } else {
+        dismissedCount = dismissedCount + 1;
+      }
+    });
+    setDataSetStatus([pendingCount, resolvedCount, dismissedCount]);
   };
 
   const state = {
@@ -49,7 +63,8 @@ function AuthProvider(props) {
     setUser,
     getComplaints,
     complaints,
-    dataSet,
+    dataSetType,
+    dataSetStatus,
   };
   return (
     <AuthContext.Provider value={state}>{props.children}</AuthContext.Provider>

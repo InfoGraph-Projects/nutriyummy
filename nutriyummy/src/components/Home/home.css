@@ -1,0 +1,16 @@
+.btnOrange{
+    width: 9rem;
+    height: 3rem;
+    border-radius: 9%;
+    color: white;
+    font-weight: 700;
+    opacity: 0.8;
+}
+.btnGreen{
+    width: 9rem;
+    height: 3rem;
+    border-radius: 9%;
+    color: white;
+    font-weight: 700;
+    opacity: 0.8;
+}
