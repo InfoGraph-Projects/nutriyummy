@@ -7,6 +7,8 @@ import React, { useContext, useRef } from "react";
 import { Link } from "react-router-dom";
 import { useHistory } from "react-router";
 import axios from "axios";
+
+// 3rd Party UI Resources
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import { Container } from "react-bootstrap";
@@ -66,7 +68,7 @@ export default function Login() {
           >
             <Form.Label>Password</Form.Label>
             <Form.Control
-              type="password"
+              type="current-password"
               ref={password}
               placeholder="Password"
             />

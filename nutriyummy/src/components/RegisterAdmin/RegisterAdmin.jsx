@@ -15,22 +15,24 @@ import { Container } from "react-bootstrap";
 // Internal Resources
 import "../Login/login.css";
 
-// Register - Component
-export default function Register() {
+// RegisterAdmin Component
+export default function RegisterAdmin() {
   const username = useRef();
   const password = useRef();
   const passwordAgain = useRef();
   const history = useHistory();
 
-  // Function to hit the signup endpoint
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    // Function to hit the signup endpoint
     if (passwordAgain.current.value !== password.current.value) {
       passwordAgain.current.setCustomValidity("Passwords don't match!");
     } else {
       const user = {
         username: username.current.value,
         password: password.current.value,
+        role: "admin",
       };
       try {
         await axios.post(
@@ -49,7 +51,7 @@ export default function Register() {
       <Container className="login">
         <img src="/assets/logo.png" alt="logo" style={{ width: "100px" }} />
         <br />
-        <h5>Register Page</h5>
+        <h5>Register Page Admin Version</h5>
         <Form onSubmit={handleSubmit}>
           <Form.Group
             style={{ padding: "0 1rem" }}
