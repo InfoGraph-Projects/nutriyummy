@@ -1,0 +1,23 @@
+.login{
+    background-color: #7fbb3a54;
+    /* height: 90vh; */
+    padding: 5rem 0;
+    margin: 3rem auto;
+    text-align: center;
+    width: 40%;
+    border-radius: 7%;
+    box-shadow: 3px 3px 3px 3px #80808094;
+    height: 81%;
+}
+.btn{
+    display: flex;
+    justify-content: space-around;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+a:hover{
+    text-decoration: none;
+    color: white;
+}
