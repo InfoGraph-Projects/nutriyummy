@@ -36,7 +36,7 @@ export default function RegisterAdmin() {
       };
       try {
         await axios.post(
-          "https://nutriyummy-backend.herokuapp.com/signup",
+          "https://nutriyummy.herokuapp.com/signup",
           user
         );
         history.push("/login");

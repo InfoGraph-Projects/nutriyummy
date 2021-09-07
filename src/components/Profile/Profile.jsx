@@ -18,10 +18,11 @@ import { AuthContext } from "../../context/authContext";
 
 // Profile - Component
 export default function Profile() {
-  window.location.reload(false);
+
   const context = useContext(AuthContext);
   const history = useHistory();
   if (!context.user.user) {
+    window.location.reload(false);
     history.push("/");
   }
   const user = context.user.user;
@@ -49,10 +50,11 @@ export default function Profile() {
     };
 
     await axios.post(
-      `https://nutriyummy-backend.herokuapp.com/api/v1/complaints`,
+      `https://nutriyummy.herokuapp.com/api/v1/complaints`,
       obj,
       config
     );
+    context.getComplaints();
   };
 
   return (

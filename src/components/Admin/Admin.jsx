@@ -50,7 +50,7 @@ export default function Admin() {
     };
 
     await axios.put(
-      `https://nutriyummy-backend.herokuapp.com/api/v1/complaints/${id}`,
+      `https://nutriyummy.herokuapp.com/api/v1/complaints/${id}`,
       obj,
       config
     );

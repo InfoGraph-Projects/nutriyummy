@@ -28,7 +28,7 @@ export default function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const res = await axios.post(
-      "https://nutriyummy-backend.herokuapp.com/signin",
+      "https://nutriyummy.herokuapp.com/signin",
       {},
       {
         auth: {
@@ -68,7 +68,7 @@ export default function Login() {
           >
             <Form.Label>Password</Form.Label>
             <Form.Control
-              type="current-password"
+              type="password"
               ref={password}
               placeholder="Password"
             />

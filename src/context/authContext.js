@@ -23,7 +23,7 @@ function AuthProvider(props) {
       headers: { Authorization: `Bearer ${user.token}` },
     };
     const res = await axios.get(
-      "https://nutriyummy-backend.herokuapp.com/api/v1/complaints",
+      "https://nutriyummy.herokuapp.com/api/v1/complaints",
       config
     );
     console.log("res from setting", res);

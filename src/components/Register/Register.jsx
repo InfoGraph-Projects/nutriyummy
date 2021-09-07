@@ -34,7 +34,7 @@ export default function Register() {
       };
       try {
         await axios.post(
-          "https://nutriyummy-backend.herokuapp.com/signup",
+          "https://nutriyummy.herokuapp.com/signup",
           user
         );
         history.push("/login");
@@ -71,13 +71,13 @@ export default function Register() {
           >
             <Form.Label>Password</Form.Label>
             <Form.Control
-              type="new-password"
+              type="password"
               ref={password}
               placeholder="Password"
             />
             <Form.Label>Password Again</Form.Label>
             <Form.Control
-              type="current-password"
+              type="password"
               ref={passwordAgain}
               placeholder="Password Again"
             />
