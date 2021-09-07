@@ -46,7 +46,7 @@ The application will be created with the following overall architecture and meth
 
 ### How to use the App
 
-<img src="./assets/howTo.gif" alt="logo"  >
+  <img src="./assets/howToR.gif" alt="use"  >
 
 ---
 
@@ -95,6 +95,9 @@ The application will be created with the following overall architecture and meth
     - VsCode.
     - Ubuntu.
     - ZSH.
+  - with help from:
+    - CodeFellows
+    - W3School
 
   **[⬆ Back to Index](#index)**
 
